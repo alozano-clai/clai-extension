@@ -3,32 +3,54 @@
   "displayName": "clai-extension-rpgle",
   "description": "clai paytments extensions",
   "version": "0.0.1",
+  "type": "module",
   "engines": {
     "vscode": "^1.125.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:rpgle"
+  ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "clai-extension-rpgle.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "clai-extension-rpgle.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "languages": [
+      {
+        "id": "rpgle",
+        "aliases": [
+          "RPGLE",
+          "rpgle"
+        ],
+        "extensions": [
+          ".rpgle",
+          ".rpg",
+          ".rpgm",
+          ".rpglec",
+          ".RPGLE"
+        ]
+      }
+    ]
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint extension.js test src",
     "pretest": "npm run lint",
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.125.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "24.x",
-    "eslint": "^10.5.0",
+    "@types/vscode": "^1.125.0",
     "@vscode/test-cli": "^0.0.15",
-    "@vscode/test-electron": "^3.0.0"
+    "@vscode/test-electron": "^3.0.0",
+    "eslint": "^10.5.0",
+    "globals": "^17.7.0"
   },
   "overrides": {
     "diff": "^8.0.4",

@@ -1,0 +1,57 @@
+{
+  "rpgle_declaraciones": {
+    "linea_unica": [
+      {
+        "inicio": "dcl-s",
+        "sintaxis": "dcl-s [nombre] [tipo]([longitud]) [opciones];",
+        "descripcion": "Declara una variable independiente (Standalone) en memoria."
+      },
+      {
+        "inicio": "dcl-c",
+        "sintaxis": "dcl-c [NOMBRE_CONSTANTE] [valor];",
+        "descripcion": "Declara una constante de solo lectura."
+      },
+      {
+        "inicio": "dcl-f",
+        "sintaxis": "dcl-f [nombre_archivo] [uso/dispositivo] [opciones];",
+        "descripcion": "Declara un archivo (base de datos, pantalla, impresora) para su uso en el programa."
+      },
+      {
+        "inicio": "dcl-subf",
+        "sintaxis": "dcl-subf [nombre_campo] [tipo]([longitud]);",
+        "descripcion": "Declara explícitamente un subcampo dentro de una estructura de datos (dcl-ds)."
+      },
+      {
+        "inicio": "dcl-parm",
+        "sintaxis": "dcl-parm [nombre_parametro] [tipo]([longitud]);",
+        "descripcion": "Declara explícitamente un parámetro de entrada/salida dentro de un dcl-pr o dcl-pi."
+      }
+    ],
+    "bloque_con_cierre": [
+      {
+        "inicio": "dcl-ds",
+        "cierre": "end-ds",
+        "sintaxis": "dcl-ds [nombre_ds] [opciones];\n  [subcampos...]\nend-ds;",
+        "descripcion": "Define una estructura de datos (Data Structure) para agrupar múltiples variables en un bloque de memoria."
+      },
+      {
+        "inicio": "dcl-pr",
+        "cierre": "end-pr",
+        "sintaxis": "dcl-pr [nombre_programa] [tipo_retorno];\n  [parametros...]\nend-pr;",
+        "descripcion": "Define el prototipo (interfaz de llamada externa) de un programa o función."
+      },
+      {
+        "inicio": "dcl-pi",
+        "cierre": "end-pi",
+        "sintaxis": "dcl-pi [nombre_procedimiento] [tipo_retorno];\n  [parametros...]\nend-pi;",
+        "descripcion": "Define la interfaz de entrada de parámetros (parámetros recibidos) para el programa o procedimiento actual."
+      },
+      {
+        "inicio": "dcl-proc",
+        "cierre": "end-proc",
+        "sintaxis": "dcl-proc [nombre_procedimiento] [export];\n  [declaraciones locales...]\n  [codigo...]\nend-proc;",
+        "descripcion": "Define el inicio y final de un subprocedimiento o función interna."
+      }
+    ]
+  }
+}
