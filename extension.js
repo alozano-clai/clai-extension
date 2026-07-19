@@ -10,6 +10,7 @@ export function activate(context) {
 	vscode.window.showInformationMessage('RPGLE Extension Activated! CLAIII');
 	console.log('RPGLE Extension Activated! CLAIII');
 	let activeEditor = vscode.window.activeTextEditor;
+	console.log('edit home');
 
 
 	// Gatillo 1: Si hay un editor abierto al iniciar la extensión, decorarlo
